@@ -485,7 +485,7 @@ export class Range {
 
     // Calculate value from handle position coordinate
     calculateValueFromX(x:number) {
-        return this.config.min + Math.round((this.config.max - this.config.min) * (x - this._element.getBoundingClientRect().left) / (this._element.getBoundingClientRect().right - this.v.left));
+        return this.config.min + Math.round((this.config.max - this.config.min) * (x - this._element.getBoundingClientRect().left) / (this._element.getBoundingClientRect().right - this._element.getBoundingClientRect().left));
     }
 
     calculateStepX(step : any) {
